@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="yCar3ca" />
+  <meta name="description" content="Questo è il sito web ufficiale di EVALITY RP. Scopri perché siamo i migliori!" />
+  <meta name="keywords" content="fivem, fivem server, fivem EVALITY RP, EVALITY, EVALITY rp server, Italia, EVALITYRoleplay, bg rp, bg rp server, Italiano Roleplay Server, GTA 5 Roleplay, Fivem RP, GTA 5 RP, &nbsp; Server Fivem  italiano GTA 5" />
+  <title>EVALITY RP - HOME</title>
+
+  <!-- box icons -->
+  <link href="css/boxicons.min.css" rel="stylesheet" />
+
+  <!-- bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" />
+
+  <!-- custom css -->
+  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- favicon -->
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
+
+  <style>
+    /* Contenitore player musica */
+    .music-player {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      left: auto;
+      background-color: #00000052;
+      padding: 12px 16px;
+      border-radius: 16px;
+      box-shadow: 0 0 8px 3px rgba(0,0,0,0.85);
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      z-index: 9999;
+      user-select: none;
+      max-width: 385px;
+      flex-direction: row-reverse;
+    }
+
+    /* Bottone play/pause rotondo */
+    #playPauseBtn {
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+      outline: none;
+      color: white;
+      font-size: 28px;
+      width: 44px;
+      height: 44px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      transition: background-color 0.25s;
+      flex-shrink: 0;
+    }
+    #playPauseBtn:hover {
+      background-color: rgba(255,255,255,0.15);
+    }
+
+    /* Slider volume */
+    #volumeSlider {
+      flex-grow: 1;
+      -webkit-appearance: none;
+      height: 4px;
+      background: white;
+      border-radius: 2px;
+      cursor: pointer;
+      margin-left: 8px;
+      margin-right: 8px;
+      max-width: 130px;
+    }
+
+    #volumeSlider::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      width: 16px;
+      height: 16px;
+      background: #3384ee; /* viola chiaro */
+      border-radius: 50%;
+      margin-top: -6px;
+      cursor: pointer;
+      box-shadow: 0 0 4px rgba(0,0,0,0.4);
+      transition: background-color 0.3s;
+    }
+    #volumeSlider::-webkit-slider-thumb:hover {
+      background-color: #3384ee;
+    }
+
+    #volumeSlider::-moz-range-thumb {
+      width: 16px;
+      height: 16px;
+      background: #3384ee;
+      border-radius: 50%;
+      cursor: pointer;
+      box-shadow: 0 0 4px rgba(0,0,0,0.4);
+      transition: background-color 0.3s;
+    }
+    #volumeSlider::-moz-range-thumb:hover {
+      background-color: #3384ee;
+    }
+
+    /* Contenitore testo titolo e artista */
+    .track-info {
+      color: #3384ee;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-weight: 600;
+      font-size: 0.9rem;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 120px;
+    }
+
+    .track-title {
+      font-weight: 700;
+      margin-bottom: 2px;
+    }
+    .track-artist {
+      font-weight: 400;
+      font-size: 0.85rem;
+      opacity: 0.8;
+    }
+
+    /* Box immagine cover */
+    .cover-box {
+      width: 50px;
+      height: 50px;
+      border-radius: 10px;
+      overflow: hidden;
+      flex-shrink: 0;
+      box-shadow: 0 0 6px 2px rgba(0,0,0,0.7);
+      background-color: #3b0d5900;
+    }
+
+    .cover-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* tooltip */
+    .music-player[title]:hover::after {
+      content: attr(title);
+      position: absolute;
+      bottom: 60px;
+      right: 20px;
+      background: rgba(0,0,0,0.85);
+      color: #3384ee;
+      padding: 5px 8px;
+      border-radius: 4px;
+      font-size: 0.8rem;
+      white-space: nowrap;
+      pointer-events: none;
+      user-select: none;
+      z-index: 10000;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- header design -->
+  <header class="header">
+    <a href="index.html" class="logo">EVALITY ROLEPLAY</a>
+    <i class="bx bx-menu active" id="menu-icon"></i>
+    <nav class="navbar">
+      <a href="index.html" class="active">HOME</a>
+      <a href="about us.html">CHI SIAMO?</a>
+      <a href="ourteam.html">IL NOSTRO TEAM</a>
+      <a href="gallery.html">GALLERIA</a>
+      <a href="faq.html">FAQ</a>
+      <a href="sponsor.html">NEXUS</a>
+    </nav>
+  </header>
+
+  <!-- home section -->
+  <section class="home" id="home">
+    <div class="home-content">
+      <h1>BENVENUTO NEL SITO DI</h1>
+      <h3><span class="typed-text"></span></h3>
+      <p>"Dove gli altri si fermano, noi continuiamo!"</p>
+      <div class="social-media">
+        <a href="https://discord.gg/evalityroleplay" target="_blank"><i class="bx bxl-discord"></i></a>
+        <a href="https://www.instagram.com/evalityrp/" target="_blank"><i class="bx bxl-instagram"></i></a>
+        <a href="https://www.tiktok.com/@evalityrp?is_from_webapp=1&sender_device=pc" target="_blank"><i class="bx bxl-tiktok"></i></a>
+        <a href="https://docs.google.com/document/d/1iOcN3XQKzcZETXhSrp8RJaBCoO09mencVe7nWjyO-P8/edit?usp=sharing" target="_blank"><i class="bx bx-book-open"></i></a>
+      </div>
+      <a href="https://cfx.re/join/3zkkl8" target="_blank" class="btn">ENTRA SU EVALITY!</a>
+    </div>
+
+    <div class="home-img">
+      <img src="images/homepage.png" alt="" />
+    </div>
+  </section>
+
+  <!-- audio player UI -->
+  <div id="music-player" class="music-player" title="Clicca per play/pausa e regola volume">
+    <div class="cover-box">
+      <img id="coverImage" src="images/cover.png" alt="Cover Canzone" />
+    </div>
+    <div style="display: flex; align-items: center; gap: 12px;">
+      <button id="playPauseBtn" aria-label="Play/Pausa musica"><i class="bx bx-play"></i></button>
+      <input type="range" id="volumeSlider" min="0" max="1" step="0.01" value="0.5" aria-label="Controllo volume" />
+      <div class="track-info">
+        <div class="track-title" id="trackTitle">elchapos_.</div>
+        <div class="track-artist" id="trackArtist">Presentazione Server</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- audio element -->
+  <audio id="audioPlayer" loop>
+    <source src="audio/audio.mp3" type="audio/mpeg" />
+    Il tuo browser non supporta l'audio HTML5.
+  </audio>
+
+  <!-- footer design -->
+  <footer class="footer">
+    <div class="footer-text">
+      <p> EVALITY RP COPYRIGHT© 2025/26</p>
+    </div>
+
+    <div class="footer-iconTop">
+    </div>
+  </footer>
+
+  <!-- scroll reveal -->
+  <script src="https://unpkg.com/scrollreveal"></script>
+
+  <!-- typed js -->
+  <script src="js/typed.umd.js"></script>
+
+  <!-- custom js -->
+  <script src="js/script.js"></script>
+
+  <!-- audio toggle logic -->
+  <script>
+    const audio = document.getElementById("audioPlayer");
+    const playPauseBtn = document.getElementById("playPauseBtn");
+    const icon = playPauseBtn.querySelector("i");
+    const volumeSlider = document.getElementById("volumeSlider");
+
+    playPauseBtn.addEventListener("click", () => {
+      if (audio.paused) {
+        audio.play();
+        icon.classList.remove("bx-play");
+        icon.classList.add("bx-pause");
+      } else {
+        audio.pause();
+        icon.classList.remove("bx-pause");
+        icon.classList.add("bx-play");
+      }
+    });
+
+    volumeSlider.addEventListener("input", () => {
+      audio.volume = volumeSlider.value;
+    });
+
+    // set initial volume
+    audio.volume = volumeSlider.value;
+  </script>
+
+  <!-- back to top script -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const button = document.querySelector(".top-btn");
+
+      button.addEventListener("click", function (event) {
+        event.preventDefault();
